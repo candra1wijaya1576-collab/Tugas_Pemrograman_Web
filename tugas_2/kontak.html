@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Formulir kontak dan saran untuk portofolio mahasiswa.">
+  <title>Kontak dan Saran | Portofolio Mahasiswa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <p class="eyebrow">TERHUBUNG</p>
+      <h1>Kontak <span class="accent">dan Saran</span></h1>
+      <p class="intro">Kirim pertanyaan, saran, atau masukan melalui formulir berikut.</p>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="Navigasi utama">
+    <div class="container nav-inner">
+      <a href="index.html">Profil</a>
+      <a href="index.html#tentang">Tentang Saya</a>
+      <a href="index.html#proyek">Proyek</a>
+      <a href="kontak.html" aria-current="page">Kontak dan Saran</a>
+    </div>
+  </nav>
+
+  <main class="container narrow">
+    <article class="panel">
+      <header>
+        <p class="eyebrow">FORMULIR</p>
+        <h2>Kirim Pesan</h2>
+        <p>Kolom bertanda <span aria-hidden="true">*</span> wajib diisi. Validasi dasar dilakukan oleh browser.</p>
+      </header>
+
+      <form action="#" method="get">
+        <div class="form-field">
+          <label for="nama">Nama lengkap <span aria-hidden="true">*</span></label>
+          <input id="nama" name="nama" type="text" autocomplete="name" minlength="2" maxlength="80" required placeholder="Nama Anda">
+        </div>
+
+        <div class="form-field">
+          <label for="email">Alamat email <span aria-hidden="true">*</span></label>
+          <input id="email" name="email" type="email" autocomplete="email" required placeholder="nama@example.com">
+        </div>
+
+        <div class="form-field">
+          <label for="telepon">Nomor telepon (opsional)</label>
+          <input id="telepon" name="telepon" type="tel" autocomplete="tel" pattern="[0-9+() .-]{8,20}" title="Masukkan 8–20 karakter berupa angka, spasi, tanda plus, kurung, titik, atau tanda hubung." placeholder="08xxxxxxxxxx">
+        </div>
+
+        <div class="form-field">
+          <label for="kategori">Jenis pesan <span aria-hidden="true">*</span></label>
+          <select id="kategori" name="kategori" required>
+            <option value="">Pilih jenis pesan</option>
+            <option value="pertanyaan">Pertanyaan</option>
+            <option value="saran">Saran</option>
+            <option value="kolaborasi">Ajakan kolaborasi</option>
+            <option value="lainnya">Lainnya</option>
+          </select>
+        </div>
+
+        <fieldset class="form-field">
+          <legend>Seberapa bermanfaat portofolio ini? <span aria-hidden="true">*</span></legend>
+          <div class="choice-row">
+            <label><input type="radio" name="penilaian" value="1" required> 1</label>
+            <label><input type="radio" name="penilaian" value="2"> 2</label>
+            <label><input type="radio" name="penilaian" value="3"> 3</label>
+            <label><input type="radio" name="penilaian" value="4"> 4</label>
+            <label><input type="radio" name="penilaian" value="5"> 5</label>
+          </div>
+          <p class="help-text">1 = kurang bermanfaat, 5 = sangat bermanfaat.</p>
+        </fieldset>
+
+        <div class="form-field">
+          <label for="tanggal">Tanggal mengirim pesan (opsional)</label>
+          <input id="tanggal" name="tanggal" type="date">
+        </div>
+
+        <div class="form-field">
+          <label for="pesan">Pesan atau saran <span aria-hidden="true">*</span></label>
+          <textarea id="pesan" name="pesan" rows="6" minlength="10" maxlength="1000" required placeholder="Tuliskan pesan Anda (minimal 10 karakter)."></textarea>
+        </div>
+
+        <div class="form-field checkbox-field">
+          <label><input type="checkbox" name="persetujuan" value="ya" required> Saya menyatakan informasi yang saya masukkan sudah benar. <span aria-hidden="true">*</span></label>
+        </div>
+
+        <div class="button-row">
+          <button type="submit">Kirim pesan</button>
+          <button class="button-secondary" type="reset">Bersihkan formulir</button>
+        </div>
+      </form>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Candra Wijaya. <a href="index.html">Kembali ke profil</a></p>
+    </div>
+  </footer>
+</body>
+</html>
