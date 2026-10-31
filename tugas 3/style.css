@@ -1,0 +1,94 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+/* 1. FLEXBOX */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgb(219, 14, 14);
+}
+
+.navbar nav {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #1e293b;
+}
+
+/* ME */
+.ME {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 60px 20px;
+    background: #2563eb;
+    color: white;
+}
+
+/* CONTENT */
+.container {
+    padding: 40px 8%;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+}
+
+/* 2. CSS GRID  */
+.card-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: blanchedalmond;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* 3. RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 5%;
+    }
+
+    .navbar {
+        padding: 20px 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    .ME {
+        padding: 40px 15px;
+    }
+}
