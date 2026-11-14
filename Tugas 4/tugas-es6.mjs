@@ -25,4 +25,35 @@ const hasil_filter = hasil_map.filter(
     ({ kategori }) => kategori === "Elektronik"
 );
 
-// Reduce()
+// Reduce() untuk keseluruah kategori yang dipilih
+const hasil_belanja = hasil_filter.reduce(
+    (total, {subtotal}) => total + subtotal, 0
+);
+
+// Reduce() Untuk keseluruhan belanja
+const total_keseluruhan = hasil_map.reduce(
+    (total, {subtotal}) => total + subtotal,0
+);
+
+// 5. Menampilkan data belanja
+console.log("===== DATA BELANJA =====");
+console.table(data_belanja);
+
+// 6. Menampilkan hasil map
+console.log("===== HASIL SUBTOTAL =====");
+console.table(hasil_map);
+
+// 7. Menampilkan hasil filter
+console.log("===== HASIL FILTER ELEKTRONIK =====");
+console.table(hasil_filter);
+
+// 8. Menampilkan total kategori
+console.log("Total Kategori Elektronik: Rp" +
+    hasil_belanja.toLocaleString("id-ID")
+);
+
+// 9. Menampilkan total keseluruhan
+console.log("===== TOTAL KESELURUHAN BELANJA =====");
+console.log("Total Belanja: Rp" +
+    total_keseluruhan.toLocaleString("id-ID")
+);
