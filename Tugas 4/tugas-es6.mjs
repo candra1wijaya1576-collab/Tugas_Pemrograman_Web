@@ -8,7 +8,11 @@ const data_belanja = [
 
 ]
 
-// Filter Berdasarkan Kategori
-const filterByKategori = (data, kategoriDipilih) =>
-  data.filter(({ kategori }) => kategori === kategoriDipilih);
+// Kategori yang dipilih
+const kategori_pilihan = "Elektronik";
 
+
+// Filter Berdasarkan Kategori
+const hasil_filter = data_belanja.filter(
+    ({ kategori }) => kategori === kategori_pilihan
+);
