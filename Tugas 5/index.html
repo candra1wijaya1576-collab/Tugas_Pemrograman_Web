@@ -14,11 +14,62 @@
                 <h1>Pencarian Profil Github</h1>
                 <p>Temukan profil Github yang dicari</p>
             </div>
-
         </header>
-        
+
+        <!-- Form Pencarian-->
+        <section class="search-panel">
+            <form id="search-form">
+                <label for="Username">
+                    Masukkan username Github
+                </label>
+
+                <div class="baris-cari">
+
+                    <input type="text"
+                     name="username" 
+                     id="username"
+                     placeholder="Contoh: candra1wijaya1576"
+                     autocomplete="off"
+                     spellcheck="false"
+                     required
+                     >
+
+                    <button type="submit" id="tom-pencari">Cari Profil</button>
+
+                </div>
+                <p class="hint">
+                    Masukkan username, tanpa tanda @.
+                </p>
+
+            </form>
+
+            <p id="pesan-status" class="status" role="status" aria-live="polite"></p>
+
+        </section>
         
 
+        <!--Hasil Pencarian-->
+
+        <section id="profilCard" class="profil-card" >
+            <div class="profile-header">
+                <img id="avatar" alt="Avatar pengguna Github">
+                <div class="profil-name">
+                    <h2 id="nama"></h2>
+                    <a id="usernameLink" class="username" href="#" target="_blank" rel="noopener noroferrer"></a>
+                </div>
+            
+                <p id="bio" class="bio"></p>
+
+                <div class="stats">
+                    <strong id="repositories">0</strong>
+                    <span>Repositori Publik</span>
+                </div>
+            </div>
+
+            <a id="profileLink" class="profile-link" href="#" target="_blank" rel="noopener noroferrer">
+                Lihat Profil Github
+            </a>
+        </section>
 
     </main>
 
