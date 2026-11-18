@@ -46,3 +46,66 @@ body {
     display: flex;
     gap: 10px;
 }
+
+.baris-cari input {
+    flex: 1;
+    padding: 13px 15px;
+}
+
+.baris-cari button {
+    background: #2f81f7;
+    color: white;
+    cursor: pointer;
+}
+
+.baris-cari button:hover:not(:disabled) {
+    background: red;
+}
+
+.baris-cari input:focus {
+    border-color: red;
+}
+
+.status.loading {
+    color: #79c0ff;
+}
+
+.status.error {
+    color: #f85149;
+}
+
+.status.success {
+    color: #3fb950;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.profile-card {
+    display: none;
+}
+
+.profile-card.visible  {
+    display: block;
+}
+
+.avatar {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.bio {
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 440px) {
+    .search-row {
+        flex-direction: column;
+    }
+}
